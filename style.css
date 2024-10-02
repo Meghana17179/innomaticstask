@@ -1,0 +1,259 @@
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation styles */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    height: 100px;
+    font-size:30px;
+    font-family: 'Lucida Sans';
+}
+.brand {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+.nav-links a:hover{
+    background-color:beige;
+    color:brown;
+}
+
+/* Hero Section */
+.hero {
+    background-image:linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4)),
+    url("https://img.freepik.com/premium-photo/astonishing-wallpaper-sikh-sunrise-golden-temple-amritsar-reflecting-hues-sunrise_902820-6420.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+.hero p {
+    font-size: 2.5rem;
+}
+
+/* Cards Section */
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+.card1 {
+    height: 670px;
+    width: 630px;
+    border-radius: 15px;
+    margin: 70px;
+    box-shadow: 5px 5px 10px 4px rgba(128, 128, 128, 0.69);
+  
+    margin-top:80px;
+}
+.card1 img {
+    height: 550px;
+    width: 550px;
+    border-radius: 5px;
+    margin: 40px 37px;
+}
+.card :hover{
+    transform: scale(1.003);
+}
+
+.card h2{
+    text-align:center;
+    font-size:60px;
+    margin-top:50px;
+}
+
+.card1 p {
+    margin: -60px 190px;
+    font-size: 50px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 250px;
+    text-align: center;
+    border: none;
+}
+
+.card1 p:hover {
+    background-color:rgb(229, 217, 217);
+    color: black;
+    cursor: pointer;
+}
+.container h2{
+    font-size:50px;
+    text-align: center;
+
+}
+.card1{
+    display:flex;
+    flex-direction:column;
+}
+.material-symbols-outlined{
+    color:rgb(227, 99, 14);
+   
+}
+.icon{
+    display:flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.bar{
+    display: flex;
+    
+    
+}
+.bar p{
+    font-size: 90px;
+    
+}
+
+.icon h3{
+    font-size:50px;
+    margin-bottom:10px;
+}
+.icon span{
+    font-size:50px;
+    margin-bottom:10px;
+}
+/* Most Viewed Places Section */
+.container{
+    height:40vh;
+    margin-top:50px;
+}
+.progress-bar {
+    margin: 20px 30px;
+
+}
+.progress-bar{
+    align-items: center;
+    width:40%;
+    margin:0 auto;
+    margin-top:30px;
+    
+}
+.bar {
+    background-color: lightgray;
+    border-radius: 5px;
+    width: 70%;
+    height: 15px;
+    margin: 10px 0;
+    position: relative;
+    
+}
+
+.bar span {
+    background-color:rgb(99, 165, 213);
+    color: white;
+    padding-left: 10px;
+    border-radius: 5px;
+    line-height: 30px;
+    height: 15px;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size:30px;
+}
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+@media screen and (max-width: 620px)
+{
+    .menu-icon {
+        display: block;
+        margin-left:500px;
+    } 
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        right: 0;
+    }  
+}
+@media screen and (max-width: 1300px)
+{
+    .menu-icon {
+        display: block;
+        margin-left:500px;
+    } 
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        right: 0;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .nav-links {
+        position: fixed;
+        right: -250px;
+        top: 0;
+        background-color: #333;
+        height: 100vh;
+        width: 250px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-left:500px;
+    }
+
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        right: 0;
+    }
+    .menu{
+        display:flex;
+        justify-content: space-evenly;
+    }
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .top-nav {
+        flex-direction: column;
+        height: auto;
+    }
+}
